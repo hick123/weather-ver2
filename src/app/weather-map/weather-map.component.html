@@ -1,0 +1,26 @@
+<mat-toolbar class=matTool>
+  <mat-toolbar-row class="toolbar">
+    <span>
+      <img src="../../assets/images/ama_33.png"></span>
+<span> <a routerLink=""><img src="../../assets/images/home.png" /></a></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="map">
+
+    <agm-map  [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+
+        <agm-marker *ngFor="let m of getServ" [latitude]="m.coord.Lat"  [longitude]="m.coord.Lon"  >
+
+        <agm-info-window class="info">
+                <div><span>city: </span>{{m.name}}</div>
+           <img src="http://openweathermap.org/img/w/{{m.weather[0].icon}}.png">
+                          <div><span>Temp: </span><h3> {{m.main.temp}} </h3></div>
+          <!-- <span><img src="../../assets/images/high.png"><h3> {{m.main.temp_max}} </h3><img src="../../assets/images/low.png"><h3> {{m.main.temp_min}} </h3></span> -->
+
+        </agm-info-window>
+
+        </agm-marker>
+    </agm-map>
+ 
+
+</div>

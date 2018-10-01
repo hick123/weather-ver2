@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; 
+  /*background-color:#314360;*/
+  background-image:url("./assets/images/un.jpg")
+ /* background-color:#3991AC; */
+
+}
+body { margin: 0; font-family: 'Roboto', sans-serif; }
